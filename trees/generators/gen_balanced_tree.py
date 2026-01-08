@@ -42,6 +42,3 @@ def generate(
             next_idx += 1
 
     return graph
-
-
-__import__("pprint").pprint(generate())

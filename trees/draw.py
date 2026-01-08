@@ -1,4 +1,5 @@
-from collections import deque, defaultdict
+from collections import defaultdict, deque
+
 import matplotlib.pyplot as plt
 
 
@@ -33,7 +34,7 @@ def compute_tree_layout(graph, root=0):
     return pos
 
 
-def draw_tree(graph, root=0):
+def draw_tree(graph, title: str, root=0):
     pos = compute_tree_layout(graph, root)
 
     plt.figure(figsize=(10, 6))
@@ -43,7 +44,7 @@ def draw_tree(graph, root=0):
         for child in children:
             x1, y1 = pos[parent]
             x2, y2 = pos[child]
-            plt.plot([x1, x2], [y1, y2], color='black')
+            plt.plot([x1, x2], [y1, y2], color="black")
 
     # draw nodes
     for node, (x, y) in pos.items():
@@ -51,5 +52,5 @@ def draw_tree(graph, root=0):
         plt.text(x, y, str(node), ha="center", va="center", color="white", fontsize=10)
 
     plt.axis("off")
-    plt.title("Balanced Tree Visualization")
+    plt.title(title)
     plt.show()
