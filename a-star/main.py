@@ -24,21 +24,25 @@ COL = 10
 
 # FIX: Check if a cell is valid (within the grid limits)
 def is_valid(row, col):
+    """Check if a cell is within the grid"""
     pass
 
 
 # FIX: Check if a cell is unblocked
 def is_unblocked(grid, row, col):
+    """Whether the cell is a valid cell with number 1  or not."""
     pass
 
 
 # FIX: Check if a cell is the destination
 def is_destination(row, col, dest):
+    """Are we on the destination cell or not?"""
     pass
 
 
 # FIX: Calculate the heuristic value of a cell (Euclidean distance to destination)
 def calculate_h_value(row, col, dest):
+    """Our heuristic function for estimation."""
     pass
 
 
